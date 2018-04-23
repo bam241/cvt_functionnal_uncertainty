@@ -1,97 +1,6 @@
 <simulation>
     <schematype>flat</schematype>
-    <agent>
-        <name>deployer1</name>
-        <prototype>deployer</prototype>
-    </agent>
-    <agent>
-        <name>deployer2</name>
-        <prototype>deployer_supply_lwr_a</prototype>
-    </agent>
-    <agent>
-        <name>deployer3</name>
-        <prototype>deployer_supply_lwr_b</prototype>
-    </agent>
-    <agent>
-        <name>deployer4</name>
-        <prototype>deployer_supply_sfr_a</prototype>
-    </agent>
-    <agent>
-        <name>deployer5</name>
-        <prototype>deployer_supply_sfr_b</prototype>
-    </agent>
-    <agent>
-        <name>deployer6</name>
-        <prototype>Sep_deployer</prototype>
-    </agent>
-    <agent>
-        <name>init_reactor</name>
-        <prototype>init_reactor_deployer_lwr_a</prototype>
-    </agent>
-    <agent>
-        <name>r_deployer_lwr_b</name>
-        <prototype>reactor_deployer_lwr_b</prototype>
-    </agent>
-    <agent>
-        <name>r_deployer_sfr_a</name>
-        <prototype>reactor_deployer_sfr_a</prototype>
-    </agent>
-    <agent>
-        <name>r_deployer_sfr_b</name>
-        <prototype>reactor_deployer_sfr_b</prototype>
-    </agent>
-    <agent>
-        <name>f_deployer_sfr_a</name>
-        <prototype>fabrication_deployer_sfr</prototype>
-    </agent>
-    <archetypes>
-        <spec>
-            <lib>cycamore</lib>
-            <name>Source</name>
-        </spec>
-        <spec>
-            <lib>cycamore</lib>
-            <name>DeployInst</name>
-        </spec>
-        <spec>
-            <lib>cycamore</lib>
-            <name>Sink</name>
-        </spec>
-        <spec>
-            <lib>cycamore</lib>
-            <name>Enrichment</name>
-        </spec>
-        <spec>
-            <lib>cycamore</lib>
-            <name>Reactor</name>
-        </spec>
-        <spec>
-            <lib>cycamore</lib>
-            <name>Storage</name>
-        </spec>
-        <spec>
-            <lib>cycamore</lib>
-            <name>FuelFab</name>
-        </spec>
-        <spec>
-            <lib>cycamore</lib>
-            <name>Separations</name>
-        </spec>
-        <spec>
-            <lib>cycamore</lib>
-            <name>Reactor</name>
-        </spec>
-        <spec>
-            <alias>cyclassReactor</alias>
-            <lib>cyclass</lib>
-            <name>Reactor</name>
-        </spec>
-        <spec>
-            <alias>cyclassFuelFab</alias>
-            <lib>cyclass</lib>
-            <name>FuelFab</name>
-        </spec>
-    </archetypes>
+    
     <control>
         <decay>never</decay>
         <duration>2400</duration>
@@ -100,6 +9,82 @@
         <startyear>2000</startyear>
         <tolerance_resource>1e-5</tolerance_resource>
     </control>
+    
+    
+    <archetypes>
+        <spec>
+            <lib>cycamore</lib>  <name>Source</name>
+        </spec>
+        <spec>
+            <lib>cycamore</lib>  <name>DeployInst</name>
+        </spec>
+        <spec>
+            <lib>cycamore</lib>  <name>Sink</name>
+        </spec>
+        <spec>
+            <lib>cycamore</lib>  <name>Enrichment</name>
+        </spec>
+        <spec>
+            <lib>cycamore</lib>  <name>Reactor</name>
+        </spec>
+        <spec>
+            <lib>cycamore</lib>  <name>Storage</name>
+        </spec>
+        <spec>
+            <lib>cycamore</lib>  <name>FuelFab</name>
+        </spec>
+        <spec>
+            <lib>cycamore</lib>  <name>Separations</name>
+        </spec>
+        <spec>
+            <lib>cycamore</lib>  <name>Reactor</name>
+        </spec>
+        <spec>
+            <alias>cyclassReactor</alias>
+            <lib>cyclass</lib>   <name>Reactor</name>
+        </spec>
+        <spec>
+            <alias>cyclassFuelFab</alias>
+            <lib>cyclass</lib>   <name>FuelFab</name>
+        </spec>
+    </archetypes>
+
+
+    <agent>
+        <name>deployer1</name>  <prototype>deployer</prototype>
+    </agent>
+    <agent>
+        <name>deployer2</name>  <prototype>deployer_supply_lwr_a</prototype>
+    </agent>
+    <agent>
+        <name>deployer3</name>  <prototype>deployer_supply_lwr_b</prototype>
+    </agent>
+    <agent>
+        <name>deployer4</name>  <prototype>deployer_supply_sfr_a</prototype>
+    </agent>
+    <agent>
+        <name>deployer5</name>  <prototype>deployer_supply_sfr_b</prototype>
+    </agent>
+    <agent>
+        <name>deployer6</name>  <prototype>Sep_deployer</prototype>
+    </agent>
+    <agent>
+        <name>init_reactor</name>  <prototype>init_reactor_deployer_lwr_a</prototype>
+    </agent>
+    <agent>
+        <name>r_deployer_lwr_b</name>  <prototype>reactor_deployer_lwr_b</prototype>
+    </agent>
+    <agent>
+        <name>r_deployer_sfr_a</name>  <prototype>reactor_deployer_sfr_a</prototype>
+    </agent>
+    <agent>
+        <name>r_deployer_sfr_b</name>  <prototype>reactor_deployer_sfr_b</prototype>
+    </agent>
+    <agent>
+        <name>f_deployer_sfr_a</name>  <prototype>fabrication_deployer_sfr</prototype>
+    </agent>
+
+    
     <prototype>
         <config>
             <Storage>
@@ -114,6 +99,7 @@
         </config>
         <name>str_pu</name>
     </prototype>
+
     <prototype>
         <config>
             <Storage>
@@ -128,6 +114,7 @@
         </config>
         <name>str_ru</name>
     </prototype>
+    
     <prototype>
         <config>
             <Source>
@@ -138,16 +125,18 @@
         </config>
         <name>src_depleted</name>
     </prototype>
+    
     <prototype>
         <config>
             <Source>
-                <outcommod>c_pu_src</outcommod>
-                <outrecipe>r_pu</outrecipe>
+                <outcommod>c_u_src</outcommod>
+                <outrecipe>r_natl_u</outrecipe>
                 <throughput>1e100</throughput>
             </Source>
         </config>
-        <name>src_pu</name>
+        <name>src_u_nat</name>
     </prototype>
+    
     <prototype>
         <config>
             <Sink>
@@ -159,6 +148,7 @@
         </config>
         <name>waste</name>
     </prototype>
+    
     <prototype>
         <config>
             <Storage>
@@ -173,6 +163,7 @@
         </config>
         <name>str_du</name>
     </prototype>
+    
     <prototype>
         <config>
             <Storage>
@@ -187,6 +178,7 @@
         </config>
         <name>str_lwr_a</name>
     </prototype>
+    
     <prototype>
         <config>
             <Storage>
@@ -197,12 +189,11 @@
                     <val>c_uox_a_sc</val>
                 </out_commods>
                 <residence_time>81</residence_time>
-                <residence_time_uncertainty>0.1</residence_time_uncertainty>
-                <systematic_uncertainty>1</systematic_uncertainty>
             </Storage>
         </config>
         <name>cool_lwr_a</name>
     </prototype>
+    
     <prototype>
         <config>
             <Storage>
@@ -217,6 +208,7 @@
         </config>
         <name>str_lwr_b</name>
     </prototype>
+    
     <prototype>
         <config>
             <Storage>
@@ -227,12 +219,11 @@
                     <val>c_uox_b_sc</val>
                 </out_commods>
                 <residence_time>81</residence_time>
-                <residence_time_uncertainty>0.1</residence_time_uncertainty>
-                <systematic_uncertainty>1</systematic_uncertainty>
             </Storage>
         </config>
         <name>cool_lwr_b</name>
     </prototype>
+    
     <prototype>
         <config>
             <Storage>
@@ -247,6 +238,7 @@
         </config>
         <name>str_sfr_a</name>
     </prototype>
+    
     <prototype>
         <config>
             <Storage>
@@ -257,12 +249,11 @@
                     <val>c_sfr_a_sc</val>
                 </out_commods>
                 <residence_time>81</residence_time>
-                <residence_time_uncertainty>0.1</residence_time_uncertainty>
-                <systematic_uncertainty>1</systematic_uncertainty>
             </Storage>
         </config>
         <name>cool_sfr_a</name>
     </prototype>
+    
     <prototype>
         <config>
             <Storage>
@@ -277,6 +268,7 @@
         </config>
         <name>str_sfr_b</name>
     </prototype>
+    
     <prototype>
         <config>
             <Storage>
@@ -287,28 +279,25 @@
                     <val>c_sfr_b_sc</val>
                 </out_commods>
                 <residence_time>81</residence_time>
-                <residence_time_uncertainty>0.1</residence_time_uncertainty>
-                <systematic_uncertainty>1</systematic_uncertainty>
             </Storage>
         </config>
         <name>cool_sfr_b</name>
     </prototype>
+    
     <prototype>
         <config>
             <Enrichment>
-                <feed_commod>c_natl_u</feed_commod>
+                <feed_commod>c_u_src</feed_commod>
                 <feed_recipe>r_natl_u</feed_recipe>
-                <initial_feed>1e100</initial_feed>
                 <product_commod>c_uox</product_commod>
                 <swu_capacity>1e100</swu_capacity>
                 <tails_assay>0.003</tails_assay>
-                <tails_assay_uncertainty>0.01</tails_assay_uncertainty>
-                <systematic_uncertainty>1</systematic_uncertainty>
                 <tails_commod>c_du</tails_commod>
             </Enrichment>
         </config>
         <name>enrichment</name>
     </prototype>
+    
     <prototype>
         <config>
             <Separations>
@@ -333,8 +322,19 @@
                             <buf_size>5000</buf_size>
                             <efficiencies>
                                 <item>
-                                    <comp>Pu</comp>
-                                    <eff>.99</eff>
+                                    <comp>238Pu</comp> <eff>.99</eff>
+                                </item>
+                                <item>
+                                    <comp>239Pu</comp> <eff>.99</eff>
+                                </item>
+                                <item>
+                                    <comp>240Pu</comp> <eff>.99</eff>
+                                </item>
+                                <item>
+                                    <comp>241Pu</comp> <eff>.99</eff>
+                                </item>
+                                <item>
+                                    <comp>242Pu</comp> <eff>.99</eff>
                                 </item>
                             </efficiencies>
                         </info>
@@ -345,8 +345,10 @@
                             <buf_size>1e100</buf_size>
                             <efficiencies>
                                 <item>
-                                    <comp>U</comp>
-                                    <eff>.99</eff>
+                                    <comp>235U</comp> <eff>.99</eff>
+                                </item>
+                                <item>
+                                    <comp>238U</comp> <eff>.99</eff>
                                 </item>
                             </efficiencies>
                         </info>
@@ -357,14 +359,15 @@
         </config>
         <name>separation</name>
     </prototype>
+
     <prototype>
         <config>
             <cyclassFuelFab>
                 <eq_command>/tmp/mouginot/opt/CLASS/DATA_BASES/FBR_Na/MOX/EQModel/XML/ESFR_MOX_keffBOC.xml,/tmp/mouginot/opt/CLASS/DATA_BASES/FBR_Na/MOX/EQModel/NFO/ESFR_MOX_keffBOC.nfo,0.8</eq_command>
                 <eq_model>EQM_1P</eq_model>
                 <fill_commod_prefs>
-                    <val>100</val>
                     <val>10</val>
+                    <val>100</val>
                     <val>1</val>
                 </fill_commod_prefs>
                 <fill_commods>
@@ -387,14 +390,13 @@
         </config>
         <name>fab_sfr</name>
     </prototype>
+    
     <prototype>
         <config>
             <cyclassReactor>
                 <batch_size>29565</batch_size>
                 <burnup>50</burnup>
-                <burnup_uncertainty>0.1</burnup_uncertainty>
                 <cycle_time>18</cycle_time>
-                <cycle_time_uncertainty>0.1</cycle_time_uncertainty>
                 <eq_command>/tmp/mouginot/opt/CLASS/DATA_BASES/PWR/UOX/EQModel/XML/PWR_UOX.xml,/tmp/mouginot/opt/CLASS/DATA_BASES/PWR/UOX/EQModel/NFO/PWR_UOX.nfo,3,1.034</eq_command>
                 <eq_model>EQM_1P</eq_model>
                 <fuel_incommods>
@@ -409,8 +411,6 @@
                 <n_batch_core>3</n_batch_core>
                 <power>2700</power>
                 <power_cap>900</power_cap>
-                <power_uncertainty>0.1</power_uncertainty>
-                <systematic_uncertainty>1</systematic_uncertainty>
                 <refuel_time>0</refuel_time>
                 <xs_command>/tmp/mouginot/opt/CLASS/DATA_BASES/PWR/UOX/XSModel/30Wg_FullUOX/,Data_Base_Info.nfo,false</xs_command>
                 <xs_model>XSM_MLP</xs_model>
@@ -419,14 +419,13 @@
         <lifetime>960</lifetime>
         <name>lwr_a</name>
     </prototype>
+    
     <prototype>
         <config>
             <cyclassReactor>
                 <batch_size>29565</batch_size>
                 <burnup>50</burnup>
-                <burnup_uncertainty>0.1</burnup_uncertainty>
                 <cycle_time>18</cycle_time>
-                <cycle_time_uncertainty>0.1</cycle_time_uncertainty>
                 <eq_command>/tmp/mouginot/opt/CLASS/DATA_BASES/PWR/UOX/EQModel/XML/PWR_UOX.xml,/tmp/mouginot/opt/CLASS/DATA_BASES/PWR/UOX/EQModel/NFO/PWR_UOX.nfo,3,1.034</eq_command>
                 <eq_model>EQM_1P</eq_model>
                 <fuel_incommods>
@@ -441,8 +440,6 @@
                 <n_batch_core>3</n_batch_core>
                 <power>2700</power>
                 <power_cap>900</power_cap>
-                <power_uncertainty>0.1</power_uncertainty>
-                <systematic_uncertainty>1</systematic_uncertainty>
                 <refuel_time>0</refuel_time>
                 <xs_command>/tmp/mouginot/opt/CLASS/DATA_BASES/PWR/UOX/XSModel/30Wg_FullUOX/,Data_Base_Info.nfo,false</xs_command>
                 <xs_model>XSM_MLP</xs_model>
@@ -451,15 +448,13 @@
         <lifetime>960</lifetime>
         <name>lwr_b</name>
     </prototype>
+    
     <prototype>
         <config>
             <cyclassReactor>
                 <batch_size>12540</batch_size>
                 <burnup>47.5</burnup>
-                <systematic_uncertainty>1</systematic_uncertainty>
-                <burnup_uncertainty>0.1</burnup_uncertainty>
                 <cycle_time>22</cycle_time>
-                <cycle_time_uncertainty>0.1</cycle_time_uncertainty>
                 <eq_command>/tmp/mouginot/opt/CLASS/DATA_BASES/FBR_Na/MOX/EQModel/XML/ESFR_MOX_keffBOC.xml,/tmp/mouginot/opt/CLASS/DATA_BASES/FBR_Na/MOX/EQModel/NFO/ESFR_MOX_keffBOC.nfo,0.8</eq_command>
                 <eq_model>EQM_1P</eq_model>
                 <fuel_incommods>
@@ -473,7 +468,6 @@
                 <n_batch_core>3</n_batch_core>
                 <power>1080</power>
                 <power_cap>360</power_cap>
-                <power_uncertainty>0.1</power_uncertainty>
                 <refuel_time>0</refuel_time>
                 <xs_command>/tmp/mouginot/opt/CLASS/DATA_BASES/FBR_Na/MOX/XSModel/ESFR_48Wg/,Data_Base_Info.nfo,false</xs_command>
                 <xs_model>XSM_MLP</xs_model>
@@ -482,14 +476,13 @@
         <lifetime>960</lifetime>
         <name>sfr_a</name>
     </prototype>
+    
     <prototype>
         <config>
             <cyclassReactor>
                 <batch_size>11467</batch_size>
                 <burnup>42.4</burnup>
-                <burnup_uncertainty>0.1</burnup_uncertainty>
                 <cycle_time>18</cycle_time>
-                <cycle_time_uncertainty>0.1</cycle_time_uncertainty>
                 <eq_command>/tmp/mouginot/opt/CLASS/DATA_BASES/FBR_Na/MOX/EQModel/XML/ESFR_MOX_keffBOC.xml,/tmp/mouginot/opt/CLASS/DATA_BASES/FBR_Na/MOX/EQModel/NFO/ESFR_MOX_keffBOC.nfo,0.8</eq_command>
                 <eq_model>EQM_1P</eq_model>
                 <fuel_incommods>
@@ -503,8 +496,6 @@
                 <n_batch_core>3</n_batch_core>
                 <power>1080</power>
                 <power_cap>360</power_cap>
-                <power_uncertainty>0.1</power_uncertainty>
-                <systematic_uncertainty>1</systematic_uncertainty>
                 <refuel_time>0</refuel_time>
                 <xs_command>/tmp/mouginot/opt/CLASS/DATA_BASES/FBR_Na/MOX/XSModel/ESFR_48Wg/,Data_Base_Info.nfo,false</xs_command>
                 <xs_model>XSM_MLP</xs_model>
@@ -513,6 +504,7 @@
         <lifetime>960</lifetime>
         <name>sfr_b</name>
     </prototype>
+    
     <prototype>
         <config>
             <DeployInst>
@@ -1246,7 +1238,7 @@
                     <val>waste</val>
                     <val>enrichment</val>
                     <val>src_depleted</val>
-                    <val>src_pu</val>
+                    <val>src_u_nat</val>
                     <val>str_du</val>
                     <val>str_ru</val>
                     <val>str_pu</val>
