@@ -131,10 +131,19 @@
             <Source>
                 <outcommod>c_u_src</outcommod>
                 <outrecipe>r_natl_u</outrecipe>
-                <throughput>1e100</throughput>
             </Source>
         </config>
         <name>src_u_nat</name>
+    </prototype>
+    
+    <prototype>
+        <config>
+            <Source>
+                <outcommod>c_u_src_2</outcommod>
+                <outrecipe>r_natl_u</outrecipe>
+            </Source>
+        </config>
+        <name>src_u_nat_2</name>
     </prototype>
     
     <prototype>
@@ -373,17 +382,13 @@
     <prototype>
         <config>
             <cyclassFuelFab>
-                <eq_command>/tmp/mouginot/opt/CLASS/DATA_BASES/FBR_Na/MOX/EQModel/XML/ESFR_MOX_keffBOC.xml,/tmp/mouginot/opt/CLASS/DATA_BASES/FBR_Na/MOX/EQModel/NFO/ESFR_MOX_keffBOC.nfo,0.8</eq_command>
+                <eq_command>/tmp/mouginot/opt/CLASS/DATA_BASES/FBR_Na/MOX/EQModel/XML/ESFR_MOX_keffBOC.xml,/tmp/mouginot/opt/CLASS/DATA_BASES/FBR_Na/MOX/EQModel/NFO/ESFR_MOX_keffBOC.nfo,0.75</eq_command>
                 <eq_model>EQM_1P</eq_model>
                 <fill_commod_prefs>
-                    <val>10</val>
                     <val>100</val>
-                    <val>1</val>
                 </fill_commod_prefs>
                 <fill_commods>
-                    <val>c_ru_str</val>
-                    <val>c_du_str</val>
-                    <val>c_du_src</val>
+                    <val>c_u_src_2</val>
                 </fill_commods>
                 <fill_recipe>r_du</fill_recipe>
                 <fill_size>20000</fill_size>
@@ -476,7 +481,7 @@
                 <burnup_uncertainty>0.1</burnup_uncertainty>
                 <cycle_time>22</cycle_time>
                 <cycle_time_uncertainty>0.1</cycle_time_uncertainty>
-                <eq_command>/tmp/mouginot/opt/CLASS/DATA_BASES/FBR_Na/MOX/EQModel/XML/ESFR_MOX_keffBOC.xml,/tmp/mouginot/opt/CLASS/DATA_BASES/FBR_Na/MOX/EQModel/NFO/ESFR_MOX_keffBOC.nfo,0.8</eq_command>
+                <eq_command>/tmp/mouginot/opt/CLASS/DATA_BASES/FBR_Na/MOX/EQModel/XML/ESFR_MOX_keffBOC.xml,/tmp/mouginot/opt/CLASS/DATA_BASES/FBR_Na/MOX/EQModel/NFO/ESFR_MOX_keffBOC.nfo,0.75</eq_command>
                 <eq_model>EQM_1P</eq_model>
                 <fuel_incommods>
                     <val>c_sfr_fuel</val>
@@ -508,7 +513,7 @@
                 <burnup_uncertainty>0.1</burnup_uncertainty>
                 <cycle_time>18</cycle_time>
                 <cycle_time_uncertainty>0.1</cycle_time_uncertainty>
-                <eq_command>/tmp/mouginot/opt/CLASS/DATA_BASES/FBR_Na/MOX/EQModel/XML/ESFR_MOX_keffBOC.xml,/tmp/mouginot/opt/CLASS/DATA_BASES/FBR_Na/MOX/EQModel/NFO/ESFR_MOX_keffBOC.nfo,0.8</eq_command>
+                <eq_command>/tmp/mouginot/opt/CLASS/DATA_BASES/FBR_Na/MOX/EQModel/XML/ESFR_MOX_keffBOC.xml,/tmp/mouginot/opt/CLASS/DATA_BASES/FBR_Na/MOX/EQModel/NFO/ESFR_MOX_keffBOC.nfo,0.75</eq_command>
                 <eq_model>EQM_1P</eq_model>
                 <fuel_incommods>
                     <val>c_sfr_fuel</val>
@@ -1196,7 +1201,7 @@
                     <val>1</val>
                     <val>3</val>
                     <val>2</val>
-                    <val>1</val>
+                    <val>2</val>
                     <val>1</val>
                     <val>2</val>
                     <val>1</val>
@@ -1250,8 +1255,10 @@
                     <val>1</val>
                     <val>1</val>
                     <val>1</val>
+                    <val>1</val>
                 </build_times>
                 <n_build>
+                    <val>1</val>
                     <val>1</val>
                     <val>1</val>
                     <val>1</val>
@@ -1265,6 +1272,7 @@
                     <val>enrichment</val>
                     <val>src_depleted</val>
                     <val>src_u_nat</val>
+                    <val>src_u_nat_2</val>
                     <val>str_du</val>
                     <val>str_ru</val>
                     <val>str_pu</val>
@@ -1279,6 +1287,7 @@
                 <build_times>
                     <val>455</val>
                     <val>1115</val>
+                    <val>1350</val>
                     <val>1562</val>
                     <val>2018</val>
                     <val>2186</val>
@@ -1291,8 +1300,10 @@
                     <val>1</val>
                     <val>1</val>
                     <val>1</val>
+                    <val>1</val>
                 </n_build>
                 <prototypes>
+                    <val>separation</val>
                     <val>separation</val>
                     <val>separation</val>
                     <val>separation</val>

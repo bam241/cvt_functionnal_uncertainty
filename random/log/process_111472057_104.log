@@ -1,0 +1,96 @@
+000 (111472057.104.000) 04/24 11:52:17 Job submitted from host: <128.104.100.44:9618?addrs=128.104.100.44-9618+[2607-f388-107c-501-90e2-baff-fe2c-2724]-9618&noUDP&sock=4699_0235_3>
+...
+001 (111472057.104.000) 04/24 17:20:35 Job executing on host: <128.105.245.246:9618?addrs=128.105.245.246-9618&noUDP&sock=5428_bc28_3>
+...
+006 (111472057.104.000) 04/24 17:20:43 Image size of job updated: 620
+	1  -  MemoryUsage of job (MB)
+	620  -  ResidentSetSize of job (KB)
+...
+006 (111472057.104.000) 04/24 17:25:44 Image size of job updated: 660
+	1  -  MemoryUsage of job (MB)
+	660  -  ResidentSetSize of job (KB)
+...
+006 (111472057.104.000) 04/24 17:30:45 Image size of job updated: 899956
+	803  -  MemoryUsage of job (MB)
+	821904  -  ResidentSetSize of job (KB)
+...
+006 (111472057.104.000) 04/24 17:35:46 Image size of job updated: 1975172
+	1853  -  MemoryUsage of job (MB)
+	1897120  -  ResidentSetSize of job (KB)
+...
+006 (111472057.104.000) 04/24 17:40:47 Image size of job updated: 3312516
+	3159  -  MemoryUsage of job (MB)
+	3234464  -  ResidentSetSize of job (KB)
+...
+006 (111472057.104.000) 04/24 17:45:48 Image size of job updated: 4796732
+	4609  -  MemoryUsage of job (MB)
+	4718680  -  ResidentSetSize of job (KB)
+...
+006 (111472057.104.000) 04/24 17:50:48 Image size of job updated: 6366176
+	6141  -  MemoryUsage of job (MB)
+	6288124  -  ResidentSetSize of job (KB)
+...
+006 (111472057.104.000) 04/24 17:55:48 Image size of job updated: 7754864
+	7497  -  MemoryUsage of job (MB)
+	7676812  -  ResidentSetSize of job (KB)
+...
+006 (111472057.104.000) 04/24 18:00:47 Image size of job updated: 9114272
+	8825  -  MemoryUsage of job (MB)
+	9036220  -  ResidentSetSize of job (KB)
+...
+006 (111472057.104.000) 04/24 18:05:47 Image size of job updated: 10348480
+	10030  -  MemoryUsage of job (MB)
+	10270428  -  ResidentSetSize of job (KB)
+...
+006 (111472057.104.000) 04/24 18:10:47 Image size of job updated: 11622684
+	11275  -  MemoryUsage of job (MB)
+	11544632  -  ResidentSetSize of job (KB)
+...
+006 (111472057.104.000) 04/24 18:15:48 Image size of job updated: 12858104
+	12481  -  MemoryUsage of job (MB)
+	12780052  -  ResidentSetSize of job (KB)
+...
+006 (111472057.104.000) 04/24 18:20:49 Image size of job updated: 14116552
+	13710  -  MemoryUsage of job (MB)
+	14038500  -  ResidentSetSize of job (KB)
+...
+006 (111472057.104.000) 04/24 18:25:50 Image size of job updated: 15342072
+	14906  -  MemoryUsage of job (MB)
+	15263636  -  ResidentSetSize of job (KB)
+...
+006 (111472057.104.000) 04/24 18:30:51 Image size of job updated: 16609480
+	16122  -  MemoryUsage of job (MB)
+	16508532  -  ResidentSetSize of job (KB)
+...
+006 (111472057.104.000) 04/24 18:35:52 Image size of job updated: 18034904
+	17468  -  MemoryUsage of job (MB)
+	17886364  -  ResidentSetSize of job (KB)
+...
+006 (111472057.104.000) 04/24 18:40:53 Image size of job updated: 19229972
+	18584  -  MemoryUsage of job (MB)
+	19029188  -  ResidentSetSize of job (KB)
+...
+006 (111472057.104.000) 04/24 18:45:54 Image size of job updated: 20543372
+	19741  -  MemoryUsage of job (MB)
+	20213828  -  ResidentSetSize of job (KB)
+...
+006 (111472057.104.000) 04/24 18:50:30 Image size of job updated: 21673372
+	19742  -  MemoryUsage of job (MB)
+	20215604  -  ResidentSetSize of job (KB)
+...
+005 (111472057.104.000) 04/24 18:50:31 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 01:20:47, Sys 0 00:01:22  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 01:20:47, Sys 0 00:01:22  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	20042512  -  Run Bytes Sent By Job
+	1780295040  -  Run Bytes Received By Job
+	20042512  -  Total Bytes Sent By Job
+	1780295040  -  Total Bytes Received By Job
+	Partitionable Resources :      Usage  Request Allocated 
+	   Cpus                 :       0.99        1         1 
+	   Disk (KB)            : 6849303    20971520  21140961 
+	   Ioheavy              :                             0 
+	   Memory (MB)          :   19742       20480     20480 
+...
