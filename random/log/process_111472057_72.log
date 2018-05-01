@@ -38,3 +38,15 @@
 	1233  -  MemoryUsage of job (MB)
 	1261628  -  ResidentSetSize of job (KB)
 ...
+007 (111472057.072.000) 04/27 15:38:07 Shadow exception!
+	Error from slot1_13@e434.chtc.wisc.edu: Job failed to complete in 72 hrs
+	0  -  Run Bytes Sent By Job
+	1780295040  -  Run Bytes Received By Job
+...
+012 (111472057.072.000) 04/27 15:38:07 Job was held.
+	Error from slot1_13@e434.chtc.wisc.edu: Job failed to complete in 72 hrs
+	Code 21 Subcode 0
+...
+009 (111472057.072.000) 04/30 09:09:57 Job was aborted by the user.
+	via condor_rm (by user mouginot)
+...

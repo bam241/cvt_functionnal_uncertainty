@@ -1,0 +1,48 @@
+000 (112025886.020.000) 04/30 21:55:26 Job submitted from host: <128.104.100.44:9618?addrs=128.104.100.44-9618+[2607-f388-107c-501-90e2-baff-fe2c-2724]-9618&noUDP&sock=4699_0235_3>
+...
+001 (112025886.020.000) 05/01 06:36:33 Job executing on host: <128.105.245.160:9618?addrs=128.105.245.160-9618&noUDP&sock=5483_75de_3>
+...
+006 (112025886.020.000) 05/01 06:36:42 Image size of job updated: 616
+	1  -  MemoryUsage of job (MB)
+	616  -  ResidentSetSize of job (KB)
+...
+006 (112025886.020.000) 05/01 06:41:43 Image size of job updated: 624
+	1  -  MemoryUsage of job (MB)
+	624  -  ResidentSetSize of job (KB)
+...
+006 (112025886.020.000) 05/01 06:46:44 Image size of job updated: 644
+	1  -  MemoryUsage of job (MB)
+	644  -  ResidentSetSize of job (KB)
+...
+006 (112025886.020.000) 05/01 06:51:44 Image size of job updated: 648
+	1  -  MemoryUsage of job (MB)
+	648  -  ResidentSetSize of job (KB)
+...
+006 (112025886.020.000) 05/01 06:56:44 Image size of job updated: 660
+	1  -  MemoryUsage of job (MB)
+	660  -  ResidentSetSize of job (KB)
+...
+006 (112025886.020.000) 05/01 07:01:45 Image size of job updated: 504664
+	417  -  MemoryUsage of job (MB)
+	426668  -  ResidentSetSize of job (KB)
+...
+006 (112025886.020.000) 05/01 07:05:03 Image size of job updated: 754540
+	418  -  MemoryUsage of job (MB)
+	427744  -  ResidentSetSize of job (KB)
+...
+005 (112025886.020.000) 05/01 07:05:04 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:07:19, Sys 0 00:00:27  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:07:19, Sys 0 00:00:27  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	1331462  -  Run Bytes Sent By Job
+	1780295680  -  Run Bytes Received By Job
+	1331462  -  Total Bytes Sent By Job
+	1780295680  -  Total Bytes Received By Job
+	Partitionable Resources :      Usage  Request Allocated 
+	   Cpus                 :       0.79        1         1 
+	   Disk (KB)            : 6832725    20971520  21318266 
+	   Ioheavy              :                             0 
+	   Memory (MB)          :     418       20480     20480 
+...
