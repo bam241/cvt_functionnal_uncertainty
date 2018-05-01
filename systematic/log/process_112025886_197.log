@@ -114,3 +114,55 @@
 	17781  -  MemoryUsage of job (MB)
 	18207172  -  ResidentSetSize of job (KB)
 ...
+006 (112025886.197.000) 05/01 11:40:45 Image size of job updated: 19006964
+	18348  -  MemoryUsage of job (MB)
+	18787712  -  ResidentSetSize of job (KB)
+...
+006 (112025886.197.000) 05/01 11:45:46 Image size of job updated: 19654224
+	18930  -  MemoryUsage of job (MB)
+	19384308  -  ResidentSetSize of job (KB)
+...
+006 (112025886.197.000) 05/01 11:50:46 Image size of job updated: 20018980
+	19246  -  MemoryUsage of job (MB)
+	19707764  -  ResidentSetSize of job (KB)
+...
+006 (112025886.197.000) 05/01 11:55:48 Image size of job updated: 20834468
+	19867  -  MemoryUsage of job (MB)
+	20343716  -  ResidentSetSize of job (KB)
+...
+006 (112025886.197.000) 05/01 12:00:47 Image size of job updated: 21398092
+	20184  -  MemoryUsage of job (MB)
+	20667632  -  ResidentSetSize of job (KB)
+...
+006 (112025886.197.000) 05/01 12:05:48 Image size of job updated: 22215032
+	20434  -  MemoryUsage of job (MB)
+	20924284  -  ResidentSetSize of job (KB)
+...
+006 (112025886.197.000) 05/01 12:10:47 Image size of job updated: 22452880
+	20463  -  MemoryUsage of job (MB)
+	20953264  -  ResidentSetSize of job (KB)
+...
+006 (112025886.197.000) 05/01 12:15:48 Image size of job updated: 22974748
+	20463  -  MemoryUsage of job (MB)
+	20953528  -  ResidentSetSize of job (KB)
+...
+006 (112025886.197.000) 05/01 12:18:23 Image size of job updated: 23190200
+	20463  -  MemoryUsage of job (MB)
+	20953528  -  ResidentSetSize of job (KB)
+...
+005 (112025886.197.000) 05/01 12:18:37 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 02:00:21, Sys 0 00:02:00  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 02:00:21, Sys 0 00:02:00  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	25062908  -  Run Bytes Sent By Job
+	1780295680  -  Run Bytes Received By Job
+	25062908  -  Total Bytes Sent By Job
+	1780295680  -  Total Bytes Received By Job
+	Partitionable Resources :      Usage  Request Allocated 
+	   Cpus                 :       0.22        1         1 
+	   Disk (KB)            : 6854206    20971520  21943088 
+	   Ioheavy              :                             0 
+	   Memory (MB)          :   20463       20480     20480 
+...
