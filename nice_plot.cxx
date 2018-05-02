@@ -5,15 +5,6 @@ int time_max = 180;
 string file[6] = {"cooling", "burnup", "cycle", "assay", "power", "separation"};
 int color[6] = {4, 2, 8, 9, 48, 38};
 
-void nice_plot() {
-  p_max["P"] = 100;
-  err_max["P"] = 0.1;
-
-  p_max["B6"] = 1200;
-  err_max["B6"] = 0.6;
-  p_max["B2"] = 12000;
-  err_max["B2"] = 1;
-}
 
 TGraphErrors* GetOneSigmaDistribution(string filename, string param) {
   TFile* file1 = TFile::Open(filename.c_str());
@@ -113,4 +104,21 @@ void my_plot(string param) {
     v_gr.push_back(add_rel_uncertainty(file[i], param, C1, color[i]));
   }
   C1->cd(2)->BuildLegend();
+}
+
+
+void nice_plot() {
+  p_max["P"] = 100;
+  err_max["P"] = 0.1;
+
+  p_max["B6"] = 1200;
+  err_max["B6"] = 0.6;
+  p_max["B2"] = 12000;
+  err_max["B2"] = 1;
+  p_max["B2_cumul"] = 12000;
+  err_max["B2_cumul"] = 1;
+
+  my_plot("P");
+  my_plot("B6");
+  my_plot("B2_cumul");
 }
