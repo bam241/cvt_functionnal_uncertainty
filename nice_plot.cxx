@@ -126,6 +126,7 @@ void my_plot(string param) {
 
   vector<TGraph*> v_gr;
   for (int i = 0; i < 6; i++) {
+    std::cout << "working with " << file[i] << std::endl;
     v_gr.push_back(add_rel_uncertainty(file[i], label[i], param, C2, color[i]));
   }
   C2->BuildLegend();

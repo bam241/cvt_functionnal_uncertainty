@@ -14,12 +14,12 @@ void add_cumul_variable(string file, string var) {
               << std::endl;
     return;
   }
+  TTree *loop_tree = in_tree->CloneTree();
   vector<double> my_cumul_var;
   vector<double> *pMy_cumul_var = &my_cumul_var;
   TBranch *cumul_branch = in_tree->Branch(
       new_branch_name.c_str(), "std::vector<double>", &pMy_cumul_var);
 
-  TTree *loop_tree = in_tree->CloneTree();
 
   vector<double> *my_var;
   loop_tree->SetBranchAddress(var.c_str(), &my_var);
@@ -27,6 +27,7 @@ void add_cumul_variable(string file, string var) {
       in_tree->GetEntries();  // read the number of entries in the t3
 
   for (int i = 0; i < nentries; i++) {
+  std::cout << __LINE__ << endl;
     loop_tree->GetEntry(i);
   std::cout << __LINE__ << endl;
     pMy_cumul_var->clear();
