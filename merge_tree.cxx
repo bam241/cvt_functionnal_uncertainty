@@ -1,9 +1,4 @@
 void merge_tree_in_file(string file) {
-  
-  
-  
-  
-  
    
   TFile *myfile = TFile::Open(file.c_str(), "update");
   if (!myfile || myfile->IsZombie()) { 
@@ -50,10 +45,10 @@ void merge_tree_in_file(string file) {
 }
 
 void merge_tree() {
-  merge_tree_in_file("systematic/old/tree.root");
-  merge_tree_in_file("ref/tree.root");
+  //merge_tree_in_file("systematic/old/tree.root");
+  //merge_tree_in_file("ref/tree.root");
   string file__[6] = {"cooling", "burnup", "cycle", "assay", "power", "separation"};
-  for(int i = 0 ; i < 6; i++){
+  for(int i = 5 ; i < 6; i++){
     string filename = "systematic_" + file__[i] + "/tree.root";
     merge_tree_in_file(filename );
   }

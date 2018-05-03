@@ -5,6 +5,7 @@ int time_max = 180;
 string ref_file = "systematic/old/tree.root";
 //string ref_file = "systematic_no_cooling_no_cycle/tree.root";
 string file[6] = {"cooling", "burnup", "cycle", "assay", "power", "separation"};
+string label[6] = {"Cooling Time", "Fuel enrichment", "Cycle Time", "Tail Assay", "Th-Power", "Separation efficiency"};
 int color[6] = {4, 2, 8, 9, 48, 38};
 
 
@@ -61,12 +62,12 @@ TGraph* GetOneSigmaGraph(string filename, string param, int bin) {
   return gr;
 };
 
-TGraph* add_rel_uncertainty(string name, string param, TCanvas* C, int color_) {
+TGraph* add_rel_uncertainty(string name, string label, string param, TCanvas* C, int color_) {
   string filename = "systematic_" + name + "/tree.root";
   TGraph* gr_ = GetOneSigmaGraph(filename, param, 1200);
   gr_->GetXaxis()->SetRangeUser(0, time_max);
   // gr_cool->GetYaxis()->SetRangeUser(0,200);
-  gr_->SetTitle(name.c_str());
+  gr_->SetTitle(label.c_str());
   gr_->SetLineColor(color_);
   C->cd();
   gr_->Draw("same");
@@ -124,8 +125,8 @@ void my_plot(string param) {
   gr_full->Draw("AL");
 
   vector<TGraph*> v_gr;
-  for (int i = 0; i < 5; i++) {
-    v_gr.push_back(add_rel_uncertainty(file[i], param, C2, color[i]));
+  for (int i = 0; i < 6; i++) {
+    v_gr.push_back(add_rel_uncertainty(file[i], label[i], param, C2, color[i]));
   }
   C2->BuildLegend();
 }

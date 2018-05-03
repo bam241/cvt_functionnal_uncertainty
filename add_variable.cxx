@@ -48,11 +48,11 @@ void add_cumul_variable(string file, string var) {
 }
 
 void add_variable() {
-  add_cumul_variable("systematic/old/tree.root", "B1");
+  //add_cumul_variable("systematic/old/tree.root", "B1");
   //add_cumul_variable("systematic_no_cooling_no_cycle/tree.root", "B1");
   //add_cumul_variable("ref/tree.root", "B1");
   string file__[6] = {"cooling", "burnup", "cycle", "assay", "power", "separation"};
-  for(int i = 0 ; i < 6; i++){
+  for(int i = 5 ; i < 6; i++){
     string filename = "systematic_" + file__[i] + "/tree.root";
     add_cumul_variable(filename ,"B1");
   }
