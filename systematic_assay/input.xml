@@ -302,7 +302,7 @@
                 <swu_capacity>1e100</swu_capacity>
                 <tails_assay>0.003</tails_assay>
                 <tails_commod>c_du</tails_commod>
-                <tails_assay_uncertainty>0.01</tails_assay_uncertainty>
+                <tails_assay_uncertainty>0.1</tails_assay_uncertainty>
                 <systematic_uncertainty>1</systematic_uncertainty>
             </Enrichment>
         </config>

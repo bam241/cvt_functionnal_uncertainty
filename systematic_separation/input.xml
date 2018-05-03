@@ -310,7 +310,7 @@
     <prototype>
         <config>
             <Separations>
-                <efficiency_uncertainty>0.01</efficiency_uncertainty>
+                <efficiency_uncertainty>0.1</efficiency_uncertainty>
                 <systematic_uncertainty>1</systematic_uncertainty>
                 <feed_commod_prefs>
                     <val>3.0</val>

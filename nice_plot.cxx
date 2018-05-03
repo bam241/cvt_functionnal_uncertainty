@@ -2,16 +2,16 @@ map<string, string> legend;
 map<string, double> p_max;
 map<string, double> err_max;
 int time_max = 180;
-string ref_file = "systematic/old/tree.root";
+string full_file = "systematic_no_separation/tree.root";
 //string ref_file = "systematic_no_cooling_no_cycle/tree.root";
-string file[6] = {"cooling", "burnup", "cycle", "assay", "power", "separation"};
-string label[6] = {"Cooling Time", "Fuel enrichment", "Cycle Time", "Tail Assay", "Th-Power", "Separation efficiency"};
+string file[6] = {"cooling", "burnup", "cycle", "assay/0.01", "power", "separation/0.01"};
+string label[6] = {"Cooling Time", "Fuel enrichment", "Cycle Time", "Tail Assay", "Thermal Power", "Separation efficiency"};
 int color[6] = {4, 2, 8, 9, 48, 38};
 
 
 TGraphErrors* GetOneSigmaDistribution(string filename, string param) {
   TFile* file1 = TFile::Open(filename.c_str());
-  TH2F* hpxpy = new TH2F("hpxpy", "py ps px", time_max * 12, 0, time_max, 300,
+  TH2F* hpxpy = new TH2F("hpxpy", "py ps px", time_max * 12, 0, time_max, 3000,
                          0, p_max[param]);
   string command = param + "/1000.:T/12>>hpxpy";
 
@@ -25,7 +25,7 @@ TGraphErrors* GetOneSigmaDistribution(string filename, string param) {
 
   for (int i = 0; i < time_max * 12; i++) {
     x[i] = (double)i / 12.;
-    TH1D* ttt = hpxpy->ProjectionY("_py", i, i + 1);
+    TH1D* ttt = hpxpy->ProjectionY("_py", i, i);
     y[i] = ttt->GetMean();
     y_sg[i] = ttt->GetStdDev();
     delete ttt;
@@ -50,9 +50,10 @@ TGraph* GetOneSigmaGraph(string filename, string param, int bin) {
 
   for (int i = 0; i < time_max * 12; i++) {
     x[i] = (double)i / 12.;
-    TH1D* ttt = hpxpy->ProjectionY("_py", i, i + 1);
+    TH1D* ttt = hpxpy->ProjectionY("_py", i, i );
     y[i] = ttt->GetMean();
     y_sg[i] = ttt->GetStdDev() / ttt->GetMean();
+    if(ttt->GetMaximum() == ttt->GetSum()){y_sg[i] = 0;}
     delete ttt;
   }
   delete tree;
@@ -64,7 +65,7 @@ TGraph* GetOneSigmaGraph(string filename, string param, int bin) {
 
 TGraph* add_rel_uncertainty(string name, string label, string param, TCanvas* C, int color_) {
   string filename = "systematic_" + name + "/tree.root";
-  TGraph* gr_ = GetOneSigmaGraph(filename, param, 1200);
+  TGraph* gr_ = GetOneSigmaGraph(filename, param, 3000);
   gr_->GetXaxis()->SetRangeUser(0, time_max);
   // gr_cool->GetYaxis()->SetRangeUser(0,200);
   gr_->SetTitle(label.c_str());
@@ -80,9 +81,9 @@ void my_plot(string param) {
 
   C1->cd();
   TGraphErrors* gr_err =
-      GetOneSigmaDistribution(ref_file.c_str(), param);
+      GetOneSigmaDistribution(full_file.c_str(), param);
   gr_err->GetXaxis()->SetRangeUser(0, time_max);
-  gr_err ->SetTitle("Error at 1 #sigma");
+  gr_err ->SetTitle("Uncertainty at 1 #sigma");
   gr_err->SetFillColor(4);
   gr_err->SetFillStyle(3002);
   gr_err->GetHistogram()->GetXaxis()->SetTitle("Time [y]");
@@ -108,13 +109,13 @@ void my_plot(string param) {
   C1->BuildLegend();
 
   TCanvas* C2 = new TCanvas();
-  TGraph* gr_full = GetOneSigmaGraph("systematic/old/tree.root", param, 300);
+  TGraph* gr_full = GetOneSigmaGraph(full_file.c_str(), param, 3000);
   gr_full->GetXaxis()->SetRangeUser(0, time_max);
   gr_full->GetYaxis()->SetRangeUser(0, err_max[param]);
   gr_full->SetLineColor(1);
   gr_full->SetTitle("Full Systematic Uncertainty");
   gr_full->GetHistogram()->GetXaxis()->SetTitle("Time [y]");
-  gr_full->GetHistogram()->GetYaxis()->SetTitle("Relative Error Contribution [n.a.]");
+  gr_full->GetHistogram()->GetYaxis()->SetTitle("Relative Uncertainty [n.a.]");
   gr_full->GetHistogram()->GetXaxis()->SetTitleSize(0.05);
   gr_full->GetHistogram()->GetXaxis()->SetTitleOffset(1);
   gr_full->GetHistogram()->GetXaxis()->SetLabelSize(0.05);
@@ -146,7 +147,7 @@ void nice_plot() {
   err_max["B2"] = 1;
   
   p_max["B1_cumul"] = 500000;
-  err_max["B1_cumul"] = 0.2;
+  err_max["B1_cumul"] = 0.1;
   legend["B1_cumul"] = "U-Nat. Consumption (cumul.) [t]";
 
   my_plot("P");
